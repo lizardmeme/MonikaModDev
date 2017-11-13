@@ -2403,7 +2403,7 @@ label monika_nsfw:
     m "I know we haven't really gotten that far into the relationship yet..."
     m "So it feels kind of embarassing to talk about 'stuff' like that."
     m "But maybe I can let it go on rare occasions, [player]."
-    m "I want to make you the happiest boyfriend after all and if that 'stuff' makes you happy..."
+    m "I want to make you the happiest boyfriend, after all. And if that 'stuff' makes you happy..."
     m "Well, just keep it a secret between us, okay?"
     m "It should be for your eyes only and no one else, [player]."
     m "That's how much I really love you~"
