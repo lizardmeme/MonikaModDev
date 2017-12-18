@@ -196,28 +196,3 @@ label monika_mistletoe
     m 1d "But seriously, don't go outside if it gets too bad."
     m 1a "Please stay safe, [player]."
     
-init 5 python:
-    # List of keywords for the topic.
-    for key in ['olympic','athlete','olympics']:
-        monika_topics.setdefault(key,[])
-        monika_topics[key].append('monika_olympics2018') # Identifier
-    monika_random_topics.append('monika_example') # Optional. Remove if you don't want Monika to bring this up at random.
-
-label monika_olympics2018:
-    m 4b "[player]? You've heard about the Olympics happening in like, a few months, right?"
-    m 4a "Well, I was wondering if you'd maybe like to go to the Olympics with me one year, if I ever cross over."
-    menu:
-        m 5a "What do you think?"
-        
-        "Sure.":
-            m 3j "Really? I can't wait!"
-            m j3 "Although, I'm not sure how you'd compare to all those burly athletes~"
-            m 5a "I'm only kidding."
-            m 5a "Ehehe~"
-         
-         
-         "No thanks.":
-            m 1g "No? Alright..." 
-            m 3k "There are still plenty more ways for us to spend time together, [player]!"
-    m 3a "If you ever decide you want to go somewhere or do something, I bet I'd love to come along."   
-    return
