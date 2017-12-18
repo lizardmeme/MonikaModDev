@@ -4791,6 +4791,26 @@ label monika_urgent:
     m 1k "I'm sure it's adorable~"
     return
 
+#This one is a bit seasonal, so it may need to be taken out later or adjusted to fit at a later date.
+label monika_olympics2018:
+    m 4b "[player]? You've heard about the Olympics happening in like, a few months, right?"
+    m 4a "Well, I was wondering if you'd maybe like to go to the Olympics with me one year, if I ever leave this game."
+    menu:
+        m 5a "What do you think?"
+        
+        "Sure.":
+            m 3j "Really? I can't wait!"
+            m 3j "Although, I'm not sure how you'd compare to all those burly athletes~"
+            m 5a "I'm only kidding."
+            m 5a "Ehehe~"
+         
+         
+         "No thanks.":
+            m 1g "No? Alright..." 
+            m 3k "There are still plenty more ways for us to spend time together, [player]!"
+    m 3a "If you ever decide you want to go somewhere or do something, I bet I'd love to come along."   
+return
+
 ##################
 #Incomplete ideas#
 ##################
