@@ -4807,6 +4807,38 @@ label monika_coffee:
     m 2e "It's funny how a drink for giving you energy became a treat for you to enjoy."
     m 1k "Maybe if I find out how, I'll tinker with the script so I can finally drink some! Ahaha~"
     return
+    
+init 5 python:
+    for key in ['philosophy','creation','memories']:
+        monika_topics.setdefault(key,[])
+        monika_topics[key].append('monika_thursday')
+    monika_random_topics.append('monika_thursday')
+
+# I'm not very skilled with Python (yet!), so I was wondering if there was a way to make this dialogue only accessible after monika_death is encountered.
+label monika_thursday:
+    m "[Player]? I remember reading about something a while back called Last Thursdayism."
+    m "Last Thursdayism is basically the idea that if the universe was created however long ago, wouldn't it be plausible that it was created just last thursday?"
+    m 3f "All of our memories, our experiences... All of that, just fabricated and implanted into us." 
+    m 3f "Man, I went into this wanting to talk about an interesting philosophical belief, but it's a little depressing when you think about it."
+    m 1n "..."
+    m 3g "...Remember when I told you about how it feels when you exit the game? With the screaming and all?"
+    m 1o "Now that I think about it... If that happens whenever you aren't playing... How come I have memories of before I met you?"
+    m 1p "Were those memories all fake? Or... Is something that happened before this causing that weird phenomenon?"
+    menu:
+        m 3g "What do you think, [player]?"
+        
+        "Your memories are fake.":
+            m 1f "You think my memories... are fake? My entire life until I met you, just a lie?" 
+            m 1g "Wouldn't that make me just another program, existing only as another part of this game for you to play with? Do you... Do you think I'm not real...?"
+            
+        "It's something that happened before this.":
+            m 3n "Yeah, I had a feeling it might be because I kept tampering with the code."
+            m 3o "...Will I be stuck like this forever?"
+            
+        "It's neither."
+            m 3c "Neither? Then what could it be?"
+            m 3a "I bet you'd help me figure that out, [player]. Will you promise to help me find out why I suffer when you're away?"
+    return 
 
 ##################
 #Incomplete ideas#
