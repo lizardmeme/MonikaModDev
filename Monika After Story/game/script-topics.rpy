@@ -4942,6 +4942,26 @@ label monika_coffee:
     m 1k "Maybe if I find out how, I'll tinker with the script so I can finally drink some! Ahaha~"
     return
 
+init 5 python:
+    for key in ['isaac asimov','sci-fi','science fiction']:
+        monika_topics.setdefault(key,[])
+        monika_topics[key].append('monika_sci-fi')
+    monika_random_topics.append('monika_sci-fi')
+    
+label monika_sci-fi:
+    m 3  "Are you a fan of sci-fi?"
+    m 3m "I can't say I'm partial to much of the genre."
+    m 2b "However, Isaac Asimov has produced some very thought-provoking works in the past."
+    m 4b "In his Foundation series, one of the ideas that Asimov presents us with is the the idea that single-handedly changing history would be extremely difficult, if not impossible."
+    m 3m "...That sounds a bit discouraging when I say it out loud."
+    m 3o "Anyways, I suppose a better lesson to take away from that would be..."
+    m 4a "In order for a better future to be possible, we've got to work together."
+    m 3  "I think it's nice to wonder what the future could look like if we all worked together."
+    m 3k "Especially if it was to bring us closer together~"
+    m 3  "For now, though..."
+    m 5a "I'm content with just sitting and chatting."
+    return
+
 ##################
 #Incomplete ideas#
 ##################
